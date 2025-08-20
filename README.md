@@ -2,7 +2,7 @@
 
 A fully interactive sales and customer insight dashboard built with Power BI, based on AdventureWorks data (2020–2022).
 
-**[Live Demo](https://adventureworks-powerbi-sales-dashboard.vercel.app)**
+**[Live Demo](https://adventureworks-powerbi-sales-dashboard.vercel.app](https://adventureworks-powerbi-sales-dashboard.vercel.app/)**
 
 ---
 
