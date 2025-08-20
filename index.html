@@ -1,49 +1,197 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Power BI Financial Dashboard - AdventureWorks</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f9f9f9; color: #333; }
-        header { text-align: center; }
-        h1 { color: #2c3e50; }
-        .section { margin-bottom: 40px; }
-        img { max-width: 100%; height: auto; margin: 10px 0; border: 1px solid #ccc; }
-        .screenshot { margin: 20px 0; }
-        .download-links a { display: block; margin: 5px 0; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maven Market – Power BI Sales Dashboard</title>
+  <meta name="description" content="Interactive Power BI dashboard and dataset for the Maven Market (AdventureWorks) analysis." />
+  <style>
+    :root {
+      --bg: #f9fafb; --ink: #111827; --muted: #6b7280; --line: #e5e7eb;
+      --card: #ffffff; --accent: #0ea5e9;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: var(--ink); }
+    header, footer { background: #111827; color: #fff; }
+    header { padding: 1rem 2rem; }
+    header h1 { margin: 0; font-size: 1.25rem; }
+    main { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+
+    h2 { margin: 1.25rem 0 .75rem; font-size: 1.15rem; }
+    p { line-height: 1.6; color: var(--ink); }
+
+    /* Buttons */
+    .btn {
+      display: inline-block; padding: .65rem 1rem; border-radius: 10px;
+      text-decoration: none; border: 1px solid var(--line); background: #fff; color: var(--ink);
+    }
+    .btn:hover { background: #f3f4f6; }
+
+    /* Power BI frame */
+    .pbi { margin-top: .5rem; }
+    .pbi-frame {
+      position: relative; width: 100%; aspect-ratio: 16/10;
+      border-radius: var(--radius); overflow: hidden; background: #f3f4f6; border: 1px solid var(--line);
+    }
+    .pbi-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .note { color: var(--muted); font-size: .925rem; margin-top: .5rem; }
+
+    /* Gallery */
+    .gallery {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px; margin-top: .75rem;
+    }
+    figure.card {
+      margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+    }
+    .card img { width: 100%; height: auto; display: block; }
+    figcaption { padding: .75rem .9rem; }
+    figcaption strong { display: block; margin-bottom: .25rem; }
+    figcaption .meta { color: var(--muted); font-size: .9rem; margin: .15rem 0 .4rem; }
+
+    footer { padding: 1rem 2rem; text-align: center; font-size: .95rem; }
+    footer a { color: #93c5fd; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>AdventureWorks Power BI Dashboard</h1>
-        <p>Financial, Product & Customer Analytics (2020–2022)</p>
-    </header>
+  <header>
+    <h1>Maven Market – Power BI Sales Dashboard</h1>
+  </header>
 
-    <div class="section">
-        <h2>Key Highlights</h2>
-        <ul>
-            <li>Total Revenue: $24.9M</li>
-            <li>Total Profit: $10.5M</li>
-            <li>Total Orders: 25.2K</li>
-            <li>Return Rate: 2.2%</li>
-        </ul>
-    </div>
+  <main>
+    <!-- Power BI -->
+    <section class="pbi">
+      <h2>Interactive Dashboard</h2>
+      <div class="pbi-frame">
+        <iframe
+          src="https://app.powerbi.com/reportEmbed?reportId=07d49700-bff0-4b76-b1c7-d9dd0b8a8cfb&autoAuth=true&ctid=60409c15-dd37-4640-975b-9eaa707437b7"
+          title="Maven Market Power BI"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <p class="note">Note: This is a secure embed. Users will be prompted to sign in with a Microsoft account to view the report.</p>
+      <p>
+        <a class="btn" target="_blank"
+           href="https://app.powerbi.com/reportEmbed?reportId=07d49700-bff0-4b76-b1c7-d9dd0b8a8cfb&autoAuth=true&ctid=60409c15-dd37-4640-975b-9eaa707437b7">
+          Open in a new window
+        </a>
+      </p>
+    </section>
 
-    <div class="section screenshot">
-        <h2>Dashboard Previews</h2>
-        <img src="assets/Exec Dashboards.png" alt="Executive Dashboard">
-        <img src="assets/Customer Detail.png" alt="Customer Analysis">
-        <img src="assets/Product Detail.png" alt="Product Detail">
-        <img src="assets/Map.png" alt="Map View">
-    </div>
+    <!-- Download -->
+    <section>
+      <h2>Download Dataset</h2>
+      <p>Download the sample dataset used to build the dashboard (Excel files + README):</p>
+      <p><a class="btn" href="MavenMarket_Dataset.zip" download>⬇ Download ZIP</a></p>
+    </section>
 
-    <div class="section download-links">
-        <h2>Download Project Files</h2>
-        <a href="downloads/PowerBI_1.pbix" download>Download Power BI File (.pbix)</a>
-        <a href="downloads/AdventureWorks Sales Data 2020.csv" download>Sales Data 2020</a>
-        <a href="downloads/AdventureWorks Sales Data 2021.csv" download>Sales Data 2021</a>
-        <a href="downloads/AdventureWorks Sales Data 2022.csv" download>Sales Data 2022</a>
-    </div>
+    <!-- Screenshots -->
+    <section>
+      <h2>Sample Snapshots</h2>
+      <div class="gallery">
+        <figure class="card">
+          <a href="assets/Exec Dashboards.png" target="_blank">
+            <img src="assets/Exec Dashboards.png" alt="Executive Dashboard" loading="lazy" />
+          </a>
+          <figcaption>
+            <strong>Executive Dashboard</strong>
+            <div class="meta">Overview of core KPIs (Revenue, COGS, EBIT) for leadership review.</div>
+            <p>Quick performance snapshot with high-level trends and goal tracking.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <a href="assets/Customer Detail.png" target="_blank">
+            <img src="assets/Customer Detail.png" alt="Customer Detail" loading="lazy" />
+          </a>
+          <figcaption>
+            <strong>Customer Detail</strong>
+            <div class="meta">Customer-level spend, frequency, and returns.</div>
+            <p>Identify high-value segments and behavior patterns.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <a href="assets/Product Detail.png" target="_blank">
+            <img src="assets/Product Detail.png" alt="Product Detail" loading="lazy" />
+          </a>
+          <figcaption>
+            <strong>Product Detail</strong>
+            <div class="meta">SKU-level sales, margin, and mix.</div>
+            <p>Spot top-performing items and discount-sensitive SKUs.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <a href="assets/Key Influencer.png" target="_blank">
+            <img src="assets/Key Influencer.png" alt="Key Influencer" loading="lazy" />
+          </a>
+          <figcaption>
+            <strong>Key Influencer</strong>
+            <div class="meta">Drivers behind outcome changes.</div>
+            <p>Explains which fields most influence selected KPIs.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <a href="assets/Decomposition tree.png" target="_blank">
+            <img src="assets/Decomposition tree.png" alt="Decomposition Tree" loading="lazy" />
+          </a>
+          <figcaption>
+            <strong>Decomposition Tree</strong>
+            <div class="meta">Drilldown contribution analysis.</div>
+            <p>Explore how categories split and contribute to a metric.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <a href="assets/Map.png" target="_blank">
+            <img src="assets/Map.png" alt="Map View" loading="lazy" />
+          </a>
+          <figcaption>
+            <strong>Map</strong>
+            <div class="meta">Regional distribution of sales.</div>
+            <p>Surface geographic clusters and channel hot spots.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <a href="assets/Category Tooltip.png" target="_blank">
+            <img src="assets/Category Tooltip.png" alt="Category Tooltip" loading="lazy" />
+          </a>
+          <figcaption>
+            <strong>Category Tooltip</strong>
+            <div class="meta">Contextual drill-through.</div>
+            <p>Compact insights via custom tooltips.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <a href="assets/Q&A.png" target="_blank">
+            <img src="assets/Q&A.png" alt="Q&A Visual" loading="lazy" />
+          </a>
+          <figcaption>
+            <strong>Q&A</strong>
+            <div class="meta">Natural-language exploration.</div>
+            <p>Ask questions in plain English to generate visuals on the fly.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Portfolio site: <a href="https://krystalwang222.github.io/MavenMarket-Data-Analytics/" target="_blank">GitHub Pages</a> |
+      Contact: <a href="mailto:wst.krystal@outlook.com">wst.krystal@outlook.com</a>
+    </p>
+    <p>
+      Data source reference:
+      <a href="https://www.kaggle.com/datasets/ukveteran/adventure-works" target="_blank">Adventure Works (Kaggle)</a>
+    </p>
+  </footer>
 </body>
 </html>
