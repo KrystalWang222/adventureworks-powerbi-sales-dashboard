@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Maven Market – Power BI Sales Dashboard</title>
-  <meta name="description" content="Interactive Power BI dashboard and dataset for the Maven Market (AdventureWorks) analysis." />
+  <title>AdventureWorks – Power BI Sales Dashboard</title>
+  <meta name="description" content="Interactive Power BI dashboard and dataset for the AdventureWorks Sales analysis." />
   <style>
     :root {
       --bg: #f9fafb; --ink: #111827; --muted: #6b7280; --line: #e5e7eb;
@@ -13,7 +13,7 @@
     }
     * { box-sizing: border-box; }
     body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: var(--ink); }
-    header, footer { background: #111827; color: #fff; }
+    header, footer { background: #1f2937; color: #f9fafb; }
     header { padding: 1rem 2rem; }
     header h1 { margin: 0; font-size: 1.25rem; }
     main { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
@@ -29,7 +29,6 @@
     .btn:hover { background: #f3f4f6; }
 
     /* Power BI frame */
-    .pbi { margin-top: .5rem; }
     .pbi-frame {
       position: relative; width: 100%; aspect-ratio: 16/10;
       border-radius: var(--radius); overflow: hidden; background: #f3f4f6; border: 1px solid var(--line);
@@ -50,14 +49,14 @@
     figcaption strong { display: block; margin-bottom: .25rem; }
     figcaption .meta { color: var(--muted); font-size: .9rem; margin: .15rem 0 .4rem; }
 
-    footer { padding: 1rem 2rem; text-align: center; font-size: .95rem; }
-    footer a { color: #93c5fd; text-decoration: none; }
+    footer { padding: 1rem 2rem; text-align: center; font-size: .95rem; background: #1f2937; color: #f9fafb; }
+    footer a { color: #60a5fa; text-decoration: none; }
     footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Maven Market – Power BI Sales Dashboard</h1>
+    <h1>AdventureWorks – Power BI Sales Dashboard</h1>
   </header>
 
   <main>
@@ -67,117 +66,79 @@
       <div class="pbi-frame">
         <iframe
           src="https://app.powerbi.com/reportEmbed?reportId=07d49700-bff0-4b76-b1c7-d9dd0b8a8cfb&autoAuth=true&ctid=60409c15-dd37-4640-975b-9eaa707437b7"
-          title="Maven Market Power BI"
+          title="AdventureWorks Power BI"
           allowfullscreen
           loading="lazy">
         </iframe>
       </div>
       <p class="note">Note: This is a secure embed. Users will be prompted to sign in with a Microsoft account to view the report.</p>
-      <p>
-        <a class="btn" target="_blank"
-           href="https://app.powerbi.com/reportEmbed?reportId=07d49700-bff0-4b76-b1c7-d9dd0b8a8cfb&autoAuth=true&ctid=60409c15-dd37-4640-975b-9eaa707437b7">
-          Open in a new window
-        </a>
-      </p>
     </section>
 
     <!-- Download -->
     <section>
-      <h2>Download Dataset</h2>
-      <p>Download the sample dataset used to build the dashboard (Excel files + README):</p>
-      <p><a class="btn" href="MavenMarket_Dataset.zip" download>⬇ Download ZIP</a></p>
+      <h2>Download Raw Data</h2>
+      <p>Download the dataset used to build this dashboard:</p>
+      <p><a class="btn" href="assets/AdventureWorks Raw Data.zip" download>⬇ AdventureWorks Raw Data (ZIP)</a></p>
     </section>
 
     <!-- Screenshots -->
     <section>
-      <h2>Sample Snapshots</h2>
+      <h2>Dashboard Snapshots</h2>
       <div class="gallery">
         <figure class="card">
           <a href="assets/Exec Dashboards.png" target="_blank">
-            <img src="assets/Exec Dashboards.png" alt="Executive Dashboard" loading="lazy" />
+            <img src="assets/Exec Dashboards.png" alt="Exec Dashboards" loading="lazy" />
           </a>
-          <figcaption>
-            <strong>Executive Dashboard</strong>
-            <div class="meta">Overview of core KPIs (Revenue, COGS, EBIT) for leadership review.</div>
-            <p>Quick performance snapshot with high-level trends and goal tracking.</p>
-          </figcaption>
+          <figcaption><strong>Exec Dashboards</strong></figcaption>
         </figure>
 
         <figure class="card">
           <a href="assets/Customer Detail.png" target="_blank">
             <img src="assets/Customer Detail.png" alt="Customer Detail" loading="lazy" />
           </a>
-          <figcaption>
-            <strong>Customer Detail</strong>
-            <div class="meta">Customer-level spend, frequency, and returns.</div>
-            <p>Identify high-value segments and behavior patterns.</p>
-          </figcaption>
+          <figcaption><strong>Customer Detail</strong></figcaption>
         </figure>
 
         <figure class="card">
           <a href="assets/Product Detail.png" target="_blank">
             <img src="assets/Product Detail.png" alt="Product Detail" loading="lazy" />
           </a>
-          <figcaption>
-            <strong>Product Detail</strong>
-            <div class="meta">SKU-level sales, margin, and mix.</div>
-            <p>Spot top-performing items and discount-sensitive SKUs.</p>
-          </figcaption>
+          <figcaption><strong>Product Detail</strong></figcaption>
         </figure>
 
         <figure class="card">
           <a href="assets/Key Influencer.png" target="_blank">
             <img src="assets/Key Influencer.png" alt="Key Influencer" loading="lazy" />
           </a>
-          <figcaption>
-            <strong>Key Influencer</strong>
-            <div class="meta">Drivers behind outcome changes.</div>
-            <p>Explains which fields most influence selected KPIs.</p>
-          </figcaption>
+          <figcaption><strong>Key Influencer</strong></figcaption>
         </figure>
 
         <figure class="card">
           <a href="assets/Decomposition tree.png" target="_blank">
-            <img src="assets/Decomposition tree.png" alt="Decomposition Tree" loading="lazy" />
+            <img src="assets/Decomposition tree.png" alt="Decomposition tree" loading="lazy" />
           </a>
-          <figcaption>
-            <strong>Decomposition Tree</strong>
-            <div class="meta">Drilldown contribution analysis.</div>
-            <p>Explore how categories split and contribute to a metric.</p>
-          </figcaption>
+          <figcaption><strong>Decomposition tree</strong></figcaption>
         </figure>
 
         <figure class="card">
           <a href="assets/Map.png" target="_blank">
-            <img src="assets/Map.png" alt="Map View" loading="lazy" />
+            <img src="assets/Map.png" alt="Map" loading="lazy" />
           </a>
-          <figcaption>
-            <strong>Map</strong>
-            <div class="meta">Regional distribution of sales.</div>
-            <p>Surface geographic clusters and channel hot spots.</p>
-          </figcaption>
+          <figcaption><strong>Map</strong></figcaption>
         </figure>
 
         <figure class="card">
           <a href="assets/Category Tooltip.png" target="_blank">
             <img src="assets/Category Tooltip.png" alt="Category Tooltip" loading="lazy" />
           </a>
-          <figcaption>
-            <strong>Category Tooltip</strong>
-            <div class="meta">Contextual drill-through.</div>
-            <p>Compact insights via custom tooltips.</p>
-          </figcaption>
+          <figcaption><strong>Category Tooltip</strong></figcaption>
         </figure>
 
         <figure class="card">
           <a href="assets/Q&A.png" target="_blank">
-            <img src="assets/Q&A.png" alt="Q&A Visual" loading="lazy" />
+            <img src="assets/Q&A.png" alt="Q&A" loading="lazy" />
           </a>
-          <figcaption>
-            <strong>Q&A</strong>
-            <div class="meta">Natural-language exploration.</div>
-            <p>Ask questions in plain English to generate visuals on the fly.</p>
-          </figcaption>
+          <figcaption><strong>Q&amp;A</strong></figcaption>
         </figure>
       </div>
     </section>
@@ -185,12 +146,17 @@
 
   <footer>
     <p>
-      Portfolio site: <a href="https://krystalwang222.github.io/MavenMarket-Data-Analytics/" target="_blank">GitHub Pages</a> |
+      Portfolio site: 
+      <a href="https://github.com/KrystalWang222" target="_blank">
+        KrystalWang222 on GitHub
+      </a> |
       Contact: <a href="mailto:wst.krystal@outlook.com">wst.krystal@outlook.com</a>
     </p>
     <p>
-      Data source reference:
-      <a href="https://www.kaggle.com/datasets/ukveteran/adventure-works" target="_blank">Adventure Works (Kaggle)</a>
+      Data source reference: 
+      <a href="https://www.kaggle.com/datasets/ukveteran/adventure-works" target="_blank">
+        Adventure Works (Kaggle)
+      </a>
     </p>
   </footer>
 </body>
