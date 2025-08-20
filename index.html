@@ -6,72 +6,68 @@
   <title>AdventureWorks – Power BI Sales Dashboard</title>
   <meta name="description" content="Interactive Power BI dashboard and dataset for the AdventureWorks Sales analysis." />
   <style>
-    :root {
-      --bg: #f9fafb; --ink: #111827; --muted: #6b7280; --line: ##e5e7eb;
-      --card: #ffffff; --accent: #0ea5e9;
-      --radius: 12px;
-    }
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: var(--ink); }
-    header, footer { background: #1f2937; color: #fffff; }
-    header { padding: 1rem 2rem; }
-    header h1 { margin: 0; font-size: 1.25rem; }
-    main { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+  :root {
+    --bg: #f9fafb; --ink: #111827; --muted: #6b7280; --line: #e5e7eb; 
+    --card: #ffffff; --accent: #0ea5e9;
+    --radius: 12px;
+  }
+  
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+  }
+  
 
-    h2 { margin: 1.25rem 0 .75rem; font-size: 1.15rem; }
-    p { line-height: 1.6; color: var(--ink); }
+  header {
+    background: #111827;   
+    color: #ffffff;
+    padding: 1rem 2rem;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 1.5rem;    
+    font-weight: bold;
+  }
+  
 
-    /* Buttons */
-    .btn {
-      display: inline-block; padding: .65rem 1rem; border-radius: 10px;
-      text-decoration: none; border: 1px solid var(--line); background: #fff; color: var(--ink);
-    }
-    .btn:hover { background: #f3f4f6; }
-
-    /* Power BI frame */
-    .pbi-frame {
-      position: relative; width: 100%; aspect-ratio: 16/10;
-      border-radius: var(--radius); overflow: hidden; background: #f3f4f6; border: 1px solid var(--line);
-    }
-    .pbi-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-    .note { color: var(--muted); font-size: .925rem; margin-top: .5rem; }
-
-    /* Gallery */
-    .gallery {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px; margin-top: .75rem;
-    }
-    figure.card {
-      margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
-    }
-    .card img { width: 100%; height: auto; display: block; }
-    figcaption { padding: .75rem .9rem; }
-    figcaption strong { display: block; margin-bottom: .25rem; }
-    figcaption .meta { color: var(--muted); font-size: .9rem; margin: .15rem 0 .4rem; }
-
-    footer {
-      padding: 1rem 2rem;
-      text-align: center;
-      font-size: .95rem;
-      background: #1f2937;
-      color: #ffffff;   /* 强制纯白文字 */
-    }
-    
-    footer p { color: #ffffff; }
-    
-    footer a,
-    footer a:link,
-    footer a:visited,
-    footer a:hover,
-    footer a:focus {
-      color: #ffffff !important;   /* 强制链接始终白色 */
-      text-decoration: none;
-    }
-    
-    footer a:hover,
-    footer a:focus {
-      text-decoration: underline;
-    }
+  figcaption {
+    padding: .75rem .9rem;
+    background: #ffffff; 
+    color: #111827;
+  }
+  figcaption strong {
+    display: block;
+    margin-bottom: .25rem;
+  }
+  figcaption .meta {
+    color: #6b7280;
+    font-size: .9rem;
+    margin: .15rem 0 .4rem;
+  }
+  
+  
+  footer {
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: .95rem;
+    background: #111827; 
+    color: #ffffff;
+  }
+  footer p { color: #ffffff; }
+  footer a,
+  footer a:link,
+  footer a:visited,
+  footer a:hover,
+  footer a:focus {
+    color: #ffffff !important;
+    text-decoration: none;
+  }
+  footer a:hover,
+  footer a:focus {
+    text-decoration: underline;
+  }
   </style>
 </head>
 <body>
